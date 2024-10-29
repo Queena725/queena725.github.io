@@ -82,3 +82,42 @@ body{
     font-size:1.1em;
   }
   
+ 
+.heart-button {
+  display: inline-block;
+  width: 20px; 
+  height: 20px;
+  background-color: #ffb6c1; 
+  position: absolute; 
+  top: 70%; 
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg); 
+  text-decoration: none;
+  border-radius: 50% 50% 0 0;
+}
+
+.heart-button::before,
+.heart-button::after {
+  content: "";
+  width: 20px; 
+  height: 20px;
+  background-color: #ffb6c1;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart-button::before {
+  top: -10px; 
+  left: 0;
+}
+
+.heart-button::after {
+  top: 0;
+  left: 10px; 
+}
+
+
+.heart-button:hover {
+  transform: scale(1.1) translate(-50%, -50%) rotate(-45deg);
+}
+
