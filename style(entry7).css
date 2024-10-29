@@ -78,3 +78,54 @@ background-image:url(images/.jpg);
 }
 
 
+body {
+    background-image: url('images/candy.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative; 
+}
+
+
+body::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 180px;
+    height: 180px;
+    background-image: url('images/candy.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none; 
+    opacity: 0.8; 
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 130px;
+    height: 130px;
+    background-image: url('images/valen.jpg'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none; 
+    opacity: 0.8; 
+}
+
+body .extra-left-image {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 110px; 
+    width: 120px;
+    height: 120px;
+    background-image: url('images/valen2.jpg'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none; 
+    opacity: 0.8; 
+}
