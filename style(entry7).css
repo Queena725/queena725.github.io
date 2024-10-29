@@ -7,7 +7,8 @@ body{
 	padding: 0;
 		font-family: Arial, Helvetica, sans-serif;
         color:rgb(91, 48, 48);
-        font-size: 150%;
+        font-size: 100%;
+        
 	  }
 
 h1{
@@ -29,8 +30,8 @@ section{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
-    color: rgba(74, 49, 49, 0.5); 
-    font-size: 24px; 
+    color: rgba(156, 111, 111, 0.5); 
+    font-size: 20px; 
     white-space: pre; 
     pointer-events: none; 
     z-index: -1; 
@@ -53,7 +54,7 @@ section{
     transform: translate(-50%, -50%);
     color: white;
     font-size: 1.5em;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(206, 142, 142, 0.5); 
     padding: 10px;
     text-align: center;
 }
@@ -75,3 +76,5 @@ background-image:url(images/.jpg);
 .V{
 	background-image: url(images/pink\ orchids2.jpg);
 }
+
+
