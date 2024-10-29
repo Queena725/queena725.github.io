@@ -7,7 +7,7 @@ Mixed Bouquet - personalized expression of your love.
 now scroll down`;
 
 let index = 0;
-const typingSpeed = 100;
+const typingSpeed = 25; 
 
 function type() {
     if (index < text.length) {
