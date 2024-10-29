@@ -4,7 +4,7 @@ Heart Orchids - heart-shaped leaves.
 Lilies - devotion, humility.
 Mixed Bouquet - personalized expression of your love.
 
-now scroll down`;
+now scroll down!`;
 
 let index = 0;
 const typingSpeed = 25; 
