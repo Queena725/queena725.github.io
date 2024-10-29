@@ -1,28 +1,26 @@
-/* General styling for the book */
 .book > :first-child {
   position: absolute;
   top: 0;
   left: 0;
   background-color: #76839b;
-  width: 200px;
-  height: 300px;
-  transform: translateZ(15px);
+  width: 100px; 
+  height: 150px; 
   border-radius: 0 2px 2px 0;
   box-shadow: 5px 5px 20px #666;
   
-  /* Title styling */
+  
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   font-family: 'Arial', sans-serif;
-  font-size: 18px;
+  font-size: 14px; 
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
 }
 
-/* Main content styling */
+
 body, html {
   margin: 0;
   padding: 0;
@@ -39,49 +37,19 @@ body, html {
   flex: 1;
 }
 
-/* Book container fixed at the bottom of the page */
+
 .book-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 600px;
   position: fixed;
-  bottom: 20px; /* Adjust the bottom spacing */
-  left: 50%;
+  bottom: 250px;
+  left: 45%;
   transform: translateX(-50%);
-  z-index: 1000; /* Ensure it's on top of other content */
+  z-index: 1000;
 }
-
-body {
-  padding-bottom: 100px; /* Adjust this based on the height of your book */
+.book img {
+  width: 100%;
+  height: auto; 
+  border-radius: 5px; 
 }
-
-/* Initial animation for the book */
-@keyframes initAnimation {
-  0% {
-    transform: rotateY(0deg) translateY(0px);
-  }
-  100% {
-    transform: rotateY(-30deg) translateY(-20px);
-  }
-}
-
-/* Styling the book element */
-.book {
-  width: 100px;
-  height: 200px;
-  position: relative;
-  transform-style: preserve-3d;
-  transform: rotateY(-30deg) translateY(-20px);
-  transition: transform 1s ease, width 1s ease, height 1s ease;
-  animation: initAnimation 1s ease 0s 1;
-}
-
-/* Hover effect: Shrink the book and move it slightly */
-.book-container:hover .book, 
-.book-container:focus .book {
-  transform: rotateY(0deg) scale(0.8) translateY(-30px); /* Shrinks and moves up */
-  width: 80px;  /* Adjust width */
-  height: 160px; /* Adjust height */
-}
-
