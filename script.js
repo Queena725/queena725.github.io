@@ -15,5 +15,4 @@ function type() {
     }
 }
 
-window.onload = type; 
-
+window.onload = type;
