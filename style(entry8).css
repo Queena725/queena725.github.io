@@ -7,7 +7,7 @@ body{
 	padding: 0;
 		font-family: Arial, Helvetica, sans-serif;
         font-size: 100%;
-        color: rgb(74, 91, 74); 
+        color: rgb(102, 128, 102); 
 }
     .text, .overlay-text {
         color: inherit;
@@ -48,7 +48,7 @@ section{
     transform: translate(-50%, -50%);
     color: rgb(76, 90, 75);
     font-size: 1.5em;
-    background-color: rgba(206, 142, 142, 0.5); 
+    background-color: rgba(158, 126, 126, 0.5); 
     padding: 10px;
     text-align: center;
 }
@@ -132,7 +132,7 @@ body::after {
     right: 0;
     width: 180px;
     height: 180px;
-    background-image: url('images/8.t.jpg');
+    background-image: url('images/entry9/t.png');
     background-repeat: no-repeat;
     background-size: contain;
     pointer-events: none; 
@@ -169,5 +169,4 @@ body .extra-left-image {
     pointer-events: none; 
     opacity: 0.8; 
 }
-
 
