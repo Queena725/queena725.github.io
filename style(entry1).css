@@ -1,1 +1,126 @@
+body {
+    background-image: url('images/loveone.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh; 
+}
 
+
+.zigzag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+    padding: 20px;
+}
+
+
+.zigzag-item {
+    display: flex;
+    align-items: center;
+    width: 80%; 
+    max-width: 800px; 
+}
+
+
+.zigzag-item img {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.zigzag-item.left {
+    justify-content: flex-start;
+}
+
+
+.zigzag-item.right {
+    justify-content: flex-end;
+}
+
+
+.zigzag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.zigzag-item {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+
+.zigzag-item.left {
+    justify-content: flex-start;
+    animation-name: slideInLeft;
+    animation-delay: 0.2s;
+}
+
+
+.zigzag-item.right {
+    justify-content: flex-end;
+    animation-name: slideInRight;
+    animation-delay: 0.4s;
+}
+
+
+.zigzag-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #717971; 
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #5d635e; 
+  }
+  
