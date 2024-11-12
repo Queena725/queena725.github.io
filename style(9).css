@@ -1,1 +1,284 @@
+.book {
+    transition: opacity 0.4s 0.2s;
+  }
+
+  p{
+    margin-top: 10vw;
+    text-align: center;
+    font-size: 2.5vw;
+    color: #c69d87;
+  }
+  .page {
+    width: 20vw;
+    height: 34vw;
+    background-color: #c7a4a4;
+    float: left;
+    margin-bottom: 0.5em;
+    background: left top no-repeat;
+    background-size: cover;
+  }
+  .page:nth-child(even) {
+    clear: both;
+  }
+  .book {
+    perspective: 250vw;
+  }
+  .book .pages {
+    width: 40vw;
+    height: 34vw;
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-radius: 4px;
+
+  }
+  .book .page {
+    float: none;
+    clear: none;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 20vw;
+    height: 34vw;
+    transform-origin: 0 0;
+    transition: transform 1.4s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    user-select: none;
+    background-color: #f0f0f0;
+  }
+  .book .page:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+   
+    z-index: 2;
+  }
+  .book .page:nth-child(odd) {
+    pointer-events: all;
+    transform: rotateY(0deg);
+    right: 0;
+    border-radius: 0 4px 4px 0;
+    background-image: linear-gradient(to right, rgba(0,0,0,.15) 0%, rgba(0,0,0,0) 10%);
+  }
+  .book .page:nth-child(odd):hover {
+    transform: rotateY(-15deg);
+  }
+  .book .page:nth-child(odd):hover:before {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  .book .page:nth-child(odd):before {
+    background: rgba(0, 0, 0, 0);
+  }
+  .book .page:nth-child(even) {
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transform-origin: 100% 0;
+    left: 0;
+    border-radius: 4px 0 0 4px;
+    border-color: black;
+    background-image: linear-gradient(to left, rgba(0,0,0,.12) 0%, rgba(0,0,0,0) 10%);
+  }
+  .book .page:nth-child(even):before {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .book .page.grabbing {
+    transition: none;
+  }
+  .book .page.flipped:nth-child(odd) {
+    pointer-events: none;
+    transform: rotateY(-180deg);
+  }
+  .book .page.flipped:nth-child(odd):before {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .book .page.flipped:nth-child(even) {
+    pointer-events: all;
+    transform: rotateY(0deg);
+  }
+  .book .page.flipped:nth-child(even):hover {
+    transform: rotateY(15deg);
+  }
+  .book .page.flipped:nth-child(even):hover:before {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  .book .page.flipped:nth-child(even):before {
+    background: rgba(0, 0, 0, 0);
+  }
+  *,
+  * :before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+
+
+  body {
+    font-family: 'Playwrite Tanzania';
+    background: #545252;
+    -webkit-tap-highlight-color: rgb(214, 175, 175);
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+    line-height: 3em;
+  }
+  .page:nth-child(odd){
+    background-position: right top;
+  }
+  
+  body {
+    background-image: url('images/entry9/calen.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative; 
+}
+
+
+body::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 180px;
+    height: 180px;
+    background-image: url('images/entry9/calen.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none; 
+    opacity: 0.8; 
+}
+body {
+    background-image: url('images/entry9/calen.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative; 
+}
+
+
+@keyframes moveFlover {
+    0% {
+        bottom: 0;
+        right: 0;
+    }
+    25% {
+        bottom: 50px; 
+        right: 100px; 
+    }
+   
+    55% {
+        bottom: 50px; 
+        right: 100px; 
+    }
+    90% {
+        bottom: 0;
+        right: 0; 
+    }
+}
+
+
+body::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 180px;
+    height: 180px;
+    background-image: url('images/entry9/calen.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none; 
+    opacity: 0.8; 
+    animation: moveCandy 10s infinite; 
+}
+
+
+
+body::before {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 130px;
+    height: 130px;
+    background-image: url('images/entry9/file.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none; 
+    opacity: 0.8; 
+}
+
+body .extra-left-image {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 110px; 
+    width: 120px;
+    height: 120px;
+    background-image: url('images/entry9/en9.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none; 
+    opacity: 0.8; 
+}
+
+.extra-left-image {
+    position: fixed;
+    bottom: 0;
+    left: 140px; 
+    width: 100px; 
+    height: 100px;
+    background-image: url('images/entry9/en9.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+
+.background-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    background-image: url('images/toy.png');
+    background-position: 100 100;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: moveBackground 15s infinite alternate; 
+}
+
+
+@keyframes moveBackground {
+    0% {
+        top: 0;
+        left: 0;
+        background-position: 100 100; 
+    }
+    50% {
+        top: 50px; 
+        left: 100px; 
+        background-position: 100px 100px; 
+    }
+    100% {
+        top: 0;
+        left: 200px; 
+        background-position: 200px 0; 
+    }
+}
 
