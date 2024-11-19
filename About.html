@@ -20,48 +20,88 @@
 
 <link rel="stylesheet" href="style2.css">
  <hr>
-<head><title>Behind The Seeds</title></head>
+<head><title> </title></head>
 <head>
     <style>
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          border: 1px solid #e7e7e7;
-          background-color: #f3f3f3;
-        }
         
-        li {
-          float: left;
-        }
-        
-        li a {
-          display: block;
-          color: #666;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-        }
-        
-        li a:hover:not(.active) {
-          background-color: #ddd;
-        }
-        
-        li a.active {
-          color: white;
-          background-color: #04AA6D;
-        }
-        </style>
-        </head>
-        <body>
-        
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="Plants.html"> Discover</a></li>
-      <li><a href="About.html">About</a></li>
-      
-    </ul>
+     
+.navbar {
+    overflow: hidden;
+    
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    float:left;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(207, 196, 168);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ebe5dd;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: rgb(10, 16, 12);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ede2bc;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  </style>
+  </head>
+  <body style="background-color:rgb(243, 234, 213);">
+  
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="About.html">About</a>
+    <div class="dropdown">
+      <button class="dropbtn">Discover
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="Plants.html"> 4 Entries </a>
+        <a href="Gift.html">Gift Inspiration</a>
+
+
+      </div>
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,7 +115,7 @@
           <div class="book">
             <img
               alt="Harmonic Collection One-Pager"
-              src="images/flower-.jpg" 
+              src="images/dai2.jpg" 
           
             />
           </div>
@@ -98,12 +138,14 @@
             </tr>
         </nav> </h2>
 <body> 
-    <video controls muded loop src="images/video1.mp4" width=" 800"> 
-        <source scre="image/video1.mp4">
-        <source scre="image/video1.Web4">
-        
 
-    </video>
+  <video class="gif-like-video" autoplay loop muted playsinline width=" 800">
+    <source src="images/video1.mp4" type="video/mp4">
+    <img src="fallback-image.gif" alt="GIF-like fallback">
+</video>
+
+
+    
 </body>
 </body><head>
     <style>
@@ -136,9 +178,6 @@
 
     </html>
     </table>
-
-
-
 
 
 
