@@ -1,3 +1,4 @@
+
 *{ 
     margin:0;
     padding:0;
@@ -43,6 +44,7 @@ nav ul li a{
 
 .content{ 
     text-align: center;
+    color: #ffffff;
 }
 .content h1{
     font-size: 160px;
@@ -75,4 +77,15 @@ nav ul li a{
     width:100%;
     height:100vh;
 }
+.content h2 { 
+    -webkit-text-stroke: 2px #fff;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+}
+
+
+
 
