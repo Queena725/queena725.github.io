@@ -1,1 +1,103 @@
+* {
+    margin: 10px;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 6em;
+    background-color: #fffded;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #717971; 
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
 
+
+
+html {
+    font-size:15px;
+  }
+  
+  @keyframes float {
+      0%, 100% {
+          transform: translateY(0); 
+      }
+      50% {
+          transform: translateY(-10px); 
+      }
+  }
+  
+  .bottom-corner-image {
+      position: fixed;
+      bottom: 5px;
+      right: 5px;
+      width: 150px;
+      height: auto;
+      opacity: 0.8;
+      z-index: 10;
+      animation: float 3s ease-in-out infinite; 
+  }
+  
+
+.draggable {
+  font-size: 5em;
+  cursor: grab;
+  margin: 20px;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+.visible {
+  display: block;
+  font-size: 2em;
+  margin-top: 20px;
+  color: #717971;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.0em; 
+  margin: 20px 0; 
+  color: #333;
+}
+h2 {
+  text-align: center;
+  font-size: 0.5em; 
+  margin: 20px 0; 
+  color: #333;
+}
+
+  
+.button:hover {
+  background-color: #5d635e; 
+}
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
