@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style(entry4).css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable Flower Emojis</title>
+    <style>
+       
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; 
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFFACD; 
+        }
+
+
+        
+        #title {
+            font-size: 1.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+       
+        .emoji-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+ 
+        .emoji {
+            font-size: 4em;
+            cursor: grab;
+            user-select: none;
+            position: relative;
+        }
+
+        
+        .emoji::after {
+            content: attr(data-text); 
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgb(255, 249, 223);
+            color: #555;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 0.6em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            white-space: nowrap;
+            z-index: 1;
+            opacity: 0; 
+            transition: opacity 0.3s ease-in-out;
+        }
+
+       
+        .emoji:active::after, .emoji.dragging::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ever wondered what these flower emojis mean and the flowers they represent?</h1>
+    <h2 id="title">Drag the Flower Emojis</h2>
+
+    <div class="emoji-container">
+        <div class="emoji" draggable="true" data-text="Cherry Blossom">🌸</div>
+        <div class="emoji" draggable="true" data-text="Hibiscus">🌺</div>
+        <div class="emoji" draggable="true" data-text="Sunflower">🌻</div>
+        <div class="emoji" draggable="true" data-text="Daisy">🌼</div>
+        <div class="emoji" draggable="true" data-text="Four Leaf Clover">🍀</div>
+        <div class="emoji" draggable="true" data-text="Bouquet">💐</div>
+        <div class="emoji" draggable="true" data-text="Rose">🌹</div>
+    </div>
+   
+   <style>
+        .title {
+          color: rgb(107, 94, 77);
+          font-family: 'Poppins', sans-serif;
+        }
+      
+        .data-text {
+          color: rgb(163, 121, 86);
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+      </style>
+      
+    <script>
+        const emojis = document.querySelectorAll('.emoji');
+
+       
+        emojis.forEach(emoji => {
+            emoji.addEventListener('dragstart', (e) => {
+ 
+                e.target.classList.add('dragging');
+            });
+
+            emoji.addEventListener('dragend', (e) => {
+              
+                e.target.classList.remove('dragging');
+            });
+        });
+    </script>
+
+<a href="Plants.html" class="button">Go Back</a>
+</body>
+</html>
+
+
 
