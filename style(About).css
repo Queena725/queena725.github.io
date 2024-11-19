@@ -43,7 +43,7 @@ body, html {
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 250px;
+  bottom: 160px;
   left: 45%;
   transform: translateX(-50%);
   z-index: 1000;
@@ -54,3 +54,18 @@ body, html {
   border-radius: 5px; 
 }
 
+
+.gif-like-video::-webkit-media-controls {
+  display: none !important; 
+}
+
+.gif-like-video {
+  object-fit: cover; 
+}
+
+
+.gif-like-video {
+  width: 100%; 
+  max-width: 1200px;
+  height: auto;
+}
