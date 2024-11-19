@@ -7,54 +7,96 @@
     <link rel="stylesheet" href="style1.css">
     <style>
        
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #f3f3f3;
-        }
+     
+.navbar {
+    overflow: hidden;
+    background-color: #c9c2a5;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(207, 196, 168);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ebe5dd;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: rgb(10, 16, 12);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ede2bc;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  </style>
+  </head>
+  <body style="background-color:rgb(243, 234, 213);">
+  
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="About.html">About</a>
+    <div class="dropdown">
+      <button class="dropbtn">Discover
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="Plants.html"> 4 Entries </a>
+        <a href="Gift.html">Gift Inspiration</a>
 
-        li {
-            float: left;
-        }
 
-        li a {
-            display: block;
-            color: #666;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover:not(.active) {
-            background-color: #ddd;
-        }
-
-        li a.active {
-            color: white;
-            background-color: #04AA6D;
-        }
-    </style>
-</head>
-<body style="background-color:rgb(243, 247, 229);">
-    <h1>Behind The Seeds</h1>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Plants.html">Discover</a></li>
-        <li><a href="About.html">About</a></li>
-    </ul>
+      </div>
+    </div> 
+  </div>
     
     <div class="container">
         <div class="mycard">
             <div class="cimg">
                 <a href="entry1.html" target="_blank">
-                    <img src="images/Red Chrysanthemum.jpg" alt="Red Chrysanthemum">
+                    <img src="images/109.jpg" alt="Red Chrysanthemum">
                 </a>
             </div>
             <div class="cdetail">
                 <h2> entry 1</h2>
-                <p> I love you.</p>
+                <p> click</p>
             </div>
         </div>
 
@@ -62,36 +104,37 @@
         <div class="mycard">
             <div class="cimg">
                 <a href="entry2.html" target="_blank">
-                <img src="images/queen of the night.jpg" alt="Queen of the Night">
+                <img src="images/queen of the night.jpg" alt="click!">
                 </a>
             </div>
             <div class="cdetail">
                 <h2>entry 2</h2>
-                <p>Queen of the Night- Transience and Beauty.</p>
+                <p>click!</p>
             </div>
         </div>
 
         <div class="container">
         <div class="mycard">
             <div class="cimg">
-                <a href="entry3.html" target="_blank"></a>
-                <img src="images/daisy 2.jpg" alt="Daisy">
+                <a href="entry3.html" target="_blank">
+                <img src="images/bk2.jpg" alt="Daisy">
             </a>
             </div>
             <div class="cdetail">
                 <h2>entry 3</h2>
-                <p>Innocence, purity, motherhood, new beginnings. Known as “day’s eye,” as it opens in the morning and closes at night.</p>
+                <p> click me</p>
             </div>
         </div>
 
         <div class="mycard">
             <div class="cimg">
-                <a href="entry4.html" target="_blank"></a>
-                <img src="images/tulip1.jpg" alt="Tulip">
+                <a href="entry4.html" target="_blank">
+                <img src="images/backg.jpg" alt="Tulip">
+                </a>
             </div>
             <div class="cdetail">
                 <h2>entry 4</h2>
-                <p>true love, hope, royalty.</p>
+                <p>emoji</p>
             </div>
         </div>
     </div>
