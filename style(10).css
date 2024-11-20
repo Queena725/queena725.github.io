@@ -53,7 +53,9 @@ body {
     max-width: 700px; 
     max-height: 700px; 
     object-fit: contain; 
-    border-radius: ; 
+  position: absolute; 
+    top: 60%; 
+    left: 50%; 
 }
 
 
