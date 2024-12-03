@@ -1,33 +1,139 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry 1</title>
     <link rel="stylesheet" href="style(entry1).css">
-    <h1>These blooms capture the essence of love</h1>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .falling-flower {
+            position: absolute;
+            top: -10%;
+            opacity: 0;
+            animation: fall linear infinite, fadein 3s ease-in;
+        }
+
+        .falling-flower.small {
+            width: 30px;
+            height: 30px;
+        }
+
+        .falling-flower.medium {
+            width: 50px;
+            height: 50px;
+        }
+
+        .falling-flower.large {
+            width: 70px;
+            height: 70px;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateX(0) rotate(0deg);
+                top: -10%;
+            }
+            100% {
+                transform: translateX(200px) rotate(360deg);
+                top: 110%;
+            }
+        }
+
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
 </head>
 <body>
-    <div class="zigzag-container">
-        <div class="zigzag-item left">
-            <img src="images/1tup.jpg" alt="Red Chrysanthemum">
-            <p>  sincere love and admiration</p>
-                 <p>the delicate forget-me-not</p>
-                <p>a token of fidelity and heartfelt remembrance</p>
-        </div>
-        <div class="zigzag-item right">
-            <p> deep love, passion, and romance</p>
-            <p>"I love you" — an expression of strong romantic feelings.
-                Desire and passion — the red color traditionally represents intense emotion and attraction.
-                Commitment and respect — especially in romantic relationships, as red roses can signify a profound level of care and devotion.</p>
-            <img src="images/1rose.jpg" alt="Red Chrysanthemum">
-           
-        </div>
-        <div class="zigzag-item left">
-            <img src="images/1Hydrang.jpg" alt="Red Chrysanthemum">
-            <p> heartfelt emotions, gratitude, and love</p>
-            <p>Perseverance and Endurance: Hydrangeas are known to last and bloom again each year. This trait symbolizes enduring love and commitment, making hydrangeas a fitting representation for lasting relationships.</p>
-        </div>
-     
-    </div>
-    <a href="Plants.html" class="button">Go Back </a>
+    <h1>Welcome to My Website</h1>
+    <p>Let me share..</p>
+    <section class="image-section">
+        <img src="images/flo.png" >
+
+    </section>
+
+    <section class="image-section">
+        <p>a random thought...</p>
+        <img src="images/hand.png" alt="Flower Image" class="image">
+        <p> ???!!</p>
+        <img src="images/fu1.png" alt="">
+
+        <p> when I’m around 60,<br> I’m definitely going to create my own garden <br>and fill it with all the flowers I love."</p>
+    </section>
+
+    <section class="image-section">
+        <p>This is a glimpse of what my future will look like ⸜(｡˃ ᵕ ˂ )⸝♡</p>
+        <img src="images/fu2.png" class="trigger" alt="Flower Garden">
+    </section>
+
     
+    <img src="images/fall1.png" class="falling-flower small" alt="Flower">
+    <img src="images/fall2.png" class="falling-flower medium" alt="Flower">
+    <img src="images/31.png" class="falling-flower large" alt="Flower">
+
+    <script>
+      
+        function randomizeFlower(flower) {
+            const screenWidth = window.innerWidth;
+            const randomLeft = Math.random() * screenWidth;
+            const randomDuration = Math.random() * 5 + 5; 
+            const randomDelay = Math.random() * 3; 
+
+            flower.style.left = `${randomLeft}px`;
+            flower.style.animationDuration = `${randomDuration}s`;
+            flower.style.animationDelay = `${randomDelay}s`;
+        }
+
+    
+        const flowers = document.querySelectorAll('.falling-flower');
+
+        flowers.forEach((flower) => {
+            randomizeFlower(flower);
+        });
+
+        const triggerImage = document.querySelector('.trigger');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                   
+                    flowers.forEach((flower) => {
+                        flower.style.opacity = 1; 
+                        flower.style.animationPlayState = "running"; 
+                    });
+                }
+            });
+        });
+
+        observer.observe(triggerImage);
+    </script>
 </body>
+
+
+
+<a href="Plants.html" class="btn back-btn">Back to Previous Page</a>
+
+
+<a href="index.html" class="btn home-btn">Go to Home Page</a>
+
+
 </html>
+
+
+
