@@ -32,6 +32,17 @@ body{
   
 }
 
+
+.gif-like-video {
+  width: 300px; 
+  height: auto; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  display: block; 
+  margin: 0 auto; 
+}
+
+
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -45,6 +56,6 @@ body{
   }
   
   .button:hover {
-    background-color: #45a049; 
+    background-color: #727762; 
   }
   
