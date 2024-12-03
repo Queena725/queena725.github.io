@@ -1,96 +1,42 @@
+.gif-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: url('images/giff-web.gif') no-repeat center center/cover;
+}
 
-    .title {
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: 'Dancing Script', cursive; 
-      font-size: 48px;
-      color: #FFC0CB; 
-      text-shadow: 1px 1px 2px rgba(192, 156, 156, 0.3); 
-    }
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
 
-body{
-    margin:0;
-    padding:0;
-    background:#ebf0ec;
-    font-family: 'Acme';
-    
-  }
+.quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
-  .container{
-    max-width:1000px;
-    margin:100px auto;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-around;
-  }
-  
-  .card{
-    position:relative;
-    margin:20px 0;
-    width:300px;
-    height:400px;
-    background: #fff;
-    transform-style:preserve-3d;
-    transform:perspective(2000px);
-    transition:1s;
-    box-shadow:inset 100px 0 50px rgba(0,0,0,0.5);
-  }
-  
-  .card:hover{
-    z-index:1111;
-    transform:perspective(2000px) rotate(-10deg);
-    box-shadow:inset 20px 0 50px rgba(0,0,0,0.5);
-  }
-  
-  .card .img-container{
-    position:relative;
-    width:100%;
-    height:100%;
-    border:1px solid #f1f6f5;
-    box-sizing:border-box;
-    transform-origin:left;
-    z-index:1;
-    transition:1s;
-  }
-  
-  .card .img-container img{
-    position:absolute;
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    object-fit:cover;
-  }
-  
-  .card:hover .img-container{
-    transform:rotateY(-135deg);
-  }
-  
-  .card .card-details{
-    position:absolute;
-    left:0;
-    top:0;
-    box-sizing:border-box;
-    padding:20px;
-    color:#1f2f2b;
-  }
-  
-   .card .card-details h2{
-    margin:0;
-    padding:0.5em 0;
-    text-transform:uppercase;
-    font-size:2em;
-    color:#556351;
-  }
-  
-  .card .card-details p{
-    margin:0;
-    padding:0;
-    line-height:25px;
-    font-size:1.1em;
-  }
-  
- 
+.poem {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 28px;
+  line-height: 1.8em;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
+.quote-explanation {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  color: #FFC0CB;
+  font-family: 'Roboto', sans-serif;
+  max-width: 200px; 
+  text-align: right;
+}
