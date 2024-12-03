@@ -2,60 +2,18 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style(entry3).css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Randomize It!</title>
-</head>
-<body> 
-    <h1>Flower Emoji</h1>
-    <img src="images/lo4.jpg" class="bottom-corner-image" alt="Corner Image">
-    <button onclick="displayRandomFlowers()">Get a Random Flower</button>
-    <div id="Flower"></div>
+    <h1></h1>
 
-    <script>
-        function displayRandomFlowers() {
-            let Flowers = ["🌸", "🌺", "🌻", "🌼", "🍀", "💐", "🌹", "🌷", "🏵️"];
-            let randomFlowers = Flowers[Math.floor(Math.random() * Flowers.length)];
-            document.getElementById("Flower").innerText = randomFlowers; 
-        }
-        
-    </script>
-</body>
-</html>
+    <div class="gif-container">
+        <div class="text-overlay">
+          <h1 class="quote">"The flower doesn’t dream of the bee. It blossoms, and the bee comes."</h1>
+          <p class="poem">A Light exists in Spring... <br> — Mark Nepo</p>
+        </div>
+      </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="style(entry3).css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drag and Reveal</title>
-</head>
-<body>
-    <h2>Drag the Emoji</h2>
-  
-    <div id="emoji" draggable="true" class="draggable">🌸</div>
-    
-
-    <div id="revealText" class="hidden">You found the secret flower text! 🌷</div>
-
-    <script>
-        const emoji = document.getElementById("emoji");
-        const revealText = document.getElementById("revealText");
-
-
-        emoji.addEventListener("dragstart", () => {
-            
-            revealText.classList.remove("hidden");
-            revealText.classList.add("visible");
-        });
+      <div class="quote-explanation">
+        This quote speaks to the idea of self-expression and authenticity, much like my website's purpose of connecting floral beauty to my personal thoughts.
+      </div>
+    </body>
+    </html>
       
-    </script>
-
-
-
-
-
-<a href="Plants.html" class="button">Go Back</a>
-</body>
-</html>
