@@ -1,45 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blooms</title>
     <link rel="stylesheet" href="style(entry2).css">
-    <h1>These blooms capture the essence of Beauty</h1>
-    
-   <style>  body {
-    background-color: rgb(233, 233, 225); 
-}</style>
-    <div class="main">
-        <ul class="cards">
-          <li class="cards_item">
-            <div class="card">
-              <div class="card_image"><img src="images/pink orchids2.jpg" alt="mixed vegetable salad in a mason jar. "></div>
-              <div class="card_content">
-                <h2 class="card_title">rare beauty &#x2022; Orchids</h2>
-                <div class="card_text">
-                  <p>With their exotic and intricate shapes, orchids represent refinement and rare beauty, often evoking a sense of mystery and sophistication. </p>
-            </div>
-          </li>
-      
-          <li class="cards_item">
-            <div class="card">
-              <div class="card_image"><img src="images/yellorose.jpg" alt="a Reuben sandwich on wax paper. "></div>
-              <div class="card_content">
-                <h2 class="card_title">queen of flower &#x2022; Roses</h2>
-                <div class="card_text">
-                  <p>Often called the "queen of flowers," roses are timeless symbols of beauty and love, admired for their lush, layered petals and captivating fragrance.</p>
-    
-                </div>
-          </li>
-        </ul>
-      </div>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+       
+        body {
+            background-image: url('images/entry 2.png'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.5s ease;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #ccb1b1;
+        }
+
+        .words-container {
+            display: flex;
+            justify-content: center;
+            gap: 300px;
+            margin-top: 250px;
+        }
+
+        .word {
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: #5f3939;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .word:hover {
+            color: #877d51;
+            transform: scale(1.1);
+        }
+
+        
+        .image-container {
+            display: none;
+            position: absolute;
+            width: 5in;
+            height: 5in;
+            pointer-events: none; 
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-container.show {
+            display: block;
+            opacity: 1;
+        }
+    </style>
 </head>
-</div>
 <body>
 
-    
- <img src="images/entry9/file(1).png" class="bottom-corner-image" alt="Corner Image">
-</body>
+    <h1>These blooms capture the essence of Beauty</h1>
+    <div class="words-container">
+        <div class="word" onclick="showImage('flower1', event)">Orchids</div>
+        <div class="word" onclick="showImage('flower2', event)">Roses</div>
+        <div class="word" onclick="showImage('flower3', event)">Peonies</div>
+    </div>
 
-<a href="Plants.html" class="button">Go Back </a>
+    <div class="image-container" id="flower1">
+        <img src="images/entry2-2.1.png" alt="Orchids">
+    </div>
+    <div class="image-container" id="flower2">
+        <img src="images/entry2-2.png" alt="Roses">
+    </div>
+    <div class="image-container" id="flower3">
+        <img src="images/entrty2-3.1.png" alt="Peonies">
+    </div>
+
+    <script>
+        function showImage(imageId, event) {
     
+            const containers = document.querySelectorAll('.image-container');
+            containers.forEach(container => {
+                container.classList.remove('show');
+            });
+            const word = event.target;
+            const rect = word.getBoundingClientRect();
+
+    
+            const imageContainer = document.getElementById(imageId);
+            imageContainer.style.left = `${rect.left + window.scrollX}px`;
+            imageContainer.style.top = `${rect.top + window.scrollY - imageContainer.offsetHeight}px`;
+            imageContainer.classList.add('show');
+        }
+
+        
+    </script>
+    <a href="Plants.html" class="btn back-btn">Back to Previous Page</a>
+ <a href="index.html" class="btn home-btn">Go to Home Page</a>
+
 </body>
 </html>
