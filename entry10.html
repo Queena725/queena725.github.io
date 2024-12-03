@@ -3,100 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entry 10</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
-    
-    <link rel="stylesheet" href="style(10).css">
-    <link rel="stylesheet" href="style3.css">
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-
-    <script src="script(10).js" defer></script> 
-    
-
-      </div>
-      
+    <title>Flower Poem</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        .background-text {
-            position: fixed; 
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); 
-            color: rgba(140, 149, 86, 0.5); 
-            font-size: 24px; 
-            white-space: pre; 
-            pointer-events: none; 
-            z-index: -1;
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background: url('images/10entry.gif') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            color: rgb(163, 112, 133);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
         }
+        .poem-title {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: 'Courier New', Courier;  
+            font-size: 1em;
+            font-weight: 700;
+            color: #e6dcdc;
+            z-index: 10;
+        }
+        .poem {
+            font-size: 1em;
+            font-family: 'Dancing Script', cursive;
+            line-height: 1.8;
+            max-width: 80%;
+            padding: 10px;
+            background: transparent;  
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(186, 98, 98, 0.3);
+            z-index: 10;
+        }
+
+        .poem-line {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            margin: 20px 0;
+        }
+
+        .quote {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2em;
+            font-style: italic;
+            position: absolute;
+            bottom: 50%;
+            left: 20%;
+            transform: translateX(-50%);
+            color: #d79b9c;
+            z-index: 5;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Flowers for Each Significant Year</h1>
-    
-    <section class="I"></section>
-    <section class="II"></section>
-    <section class="III"></section>
-    <section class="IV"></section>
-    <section class="V"></section>
-
-    <div class="background-text" id="typing-text"></div>
-    <script src="script(10).js"></script>
-            
 
 
-    
-
-        <div class="text-with-images">
-            <p>
-                Hover over the dates 
-                <span class="hover-text" data-image="images/flr.png"></span>
-                to see an image.
-            </p>
-            <p>
-                
-                <span class="hover-text" data-image="images/1st.png">1st</span>
-                
-            </p>
-            <p>
-                
-                <span class="hover-text" data-image="images/5th.png">5th</span>
-                
-            </p>
-            <p>
-                
-                <span class="hover-text" data-image="images/10t.png">10th</span>
-
-                     
-                <span class="hover-text" data-image="images/ro.png">15th</span>
-                
-            </p>
-            <p>
-                
-                <span class="hover-text" data-image="images/irises-.png">25th</span>
-                
-            </p>
-            <p>
-                
-                <span class="hover-text" data-image="images/violet..png">50th</span>
-                
-            </p>
-            </p>
-        </div>
-    
-        <div class="popup-image" id="popupImage">
-            <img src="" alt="Popup" id="popupImg">
-        </div>
-    
-       
-    </body>
-    </html>
-              
-               
-            </div>
-
-
-        </div>
+    <div class="poem-title">
+        “A Light exists in Spring” <br> by Emily Dickinson
     </div>
+
+
+    <div class="poem">
+        <div class="poem-line">A Light exists in Spring</div>
+        <div class="poem-line">Not present on the Year</div>
+        <div class="poem-line">At any other period —</div>
+        <div class="poem-line">When March is scarcely here</div>
+
+        <div class="poem-line">It waits upon the Lawn,</div>
+        <div class="poem-line">It shows the furthest Tree</div>
+        <div class="poem-line">Upon the furthest Slope you know</div>
+        <div class="poem-line">It almost speaks to you.</div>
+
+        <div class="poem-line">Then as Horizons step</div>
+        <div class="poem-line">Or Noons report away</div>
+        <div class="poem-line">Without the Formula of sound</div>
+        <div class="poem-line">It passes and we stay —</div>
+
+        <div class="poem-line">A quality of loss</div>
+        <div class="poem-line">Affecting our Content</div>
+        <div class="poem-line">As Trade had suddenly encroached</div>
+        <div class="poem-line">Upon a Sacrament.</div>
+    </div>
+
+    <div class="quote">"Where flowers bloom, <br>so does hope." — Lady Bird Johnson</div>
+
+    <script>
+        
+        window.addEventListener('load', function() {
+            const poemLines = document.querySelectorAll('.poem-line');
+            poemLines.forEach((line, index) => {
+                setTimeout(() => {
+                    line.style.opacity = 1;
+                }, index * 1000); 
+            });
+        });
+    </script>
+
 </body>
 </html>
-
-
