@@ -1,103 +1,42 @@
-* {
-    margin: 10px;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 6em;
-    background-color: #fffded;
-  }
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #717971; 
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-
-
-
-html {
-    font-size:15px;
-  }
-  
-  @keyframes float {
-      0%, 100% {
-          transform: translateY(0); 
-      }
-      50% {
-          transform: translateY(-10px); 
-      }
-  }
-  
-  .bottom-corner-image {
-      position: fixed;
-      bottom: 5px;
-      right: 5px;
-      width: 150px;
-      height: auto;
-      opacity: 0.8;
-      z-index: 10;
-      animation: float 3s ease-in-out infinite; 
-  }
-  
-
-.draggable {
-  font-size: 5em;
-  cursor: grab;
-  margin: 20px;
+.gif-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: url('images/giff-web.gif') no-repeat center center/cover;
 }
 
-
-.hidden {
-  display: none;
-}
-
-
-.visible {
-  display: block;
-  font-size: 2em;
-  margin-top: 20px;
-  color: #717971;
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  animation: fadeIn 0.5s ease-in-out;
+  color: white;
 }
 
-
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
+.quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-h1 {
-  text-align: center;
-  font-size: 1.0em; 
-  margin: 20px 0; 
-  color: #333;
-}
-h2 {
-  text-align: center;
-  font-size: 0.5em; 
-  margin: 20px 0; 
-  color: #333;
+.poem {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 28px;
+  line-height: 1.8em;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-  
-.button:hover {
-  background-color: #5d635e; 
-}
-*,
-*::before,
-*::after {
-box-sizing: border-box;
+.quote-explanation {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  color: #FFC0CB;
+  font-family: 'Roboto', sans-serif;
+  max-width: 200px; 
+  text-align: right;
 }
