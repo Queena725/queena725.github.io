@@ -7,19 +7,24 @@
 }
 
 .text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    
+    padding: 20px;
+    border-radius: 10px;
 }
+
 
 .quote {
   font-family: 'Playfair Display', serif;
-  font-size: 36px;
+  font-size: 35px; 
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  margin-left: 60px; 
 }
 
 .poem {
@@ -40,3 +45,48 @@
   max-width: 200px; 
   text-align: right;
 }
+
+.flying-bee {
+  position: absolute;
+  width: 50px; 
+  animation: fly-zigzag 8s linear infinite; 
+  z-index: 10; 
+}
+
+
+@keyframes fly-zigzag {
+  0% {
+    transform: translate(-100px, -150px) rotate(0deg); 
+  }
+  10% {
+    transform: translate(10vw, -180px) rotate(10deg); 
+  }
+  20% {
+    transform: translate(20vw, -130px) rotate(-10deg); 
+  }
+  30% {
+    transform: translate(30vw, -200px) rotate(15deg); 
+  }
+  40% {
+    transform: translate(40vw, -140px) rotate(-15deg);
+  }
+  50% {
+    transform: translate(50vw, -190px) rotate(20deg); 
+  }
+  60% {
+    transform: translate(60vw, -170px) rotate(-20deg); 
+  }
+  70% {
+    transform: translate(70vw, -200px) rotate(25deg);
+  }
+  80% {
+    transform: translate(80vw, -150px) rotate(-25deg); 
+  }
+  90% {
+    transform: translate(90vw, -180px) rotate(30deg);
+  }
+  100% {
+    transform: translate(100vw, -150px) rotate(0deg);
+  }
+}
+
