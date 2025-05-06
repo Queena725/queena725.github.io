@@ -6,143 +6,132 @@
     <title>My Harmonic Collection</title>
     <link rel="stylesheet" href="style1.css">
     <style>
-       
-     
-.navbar {
-    overflow: hidden;
-    background-color: #c9c2a5;
-  }
-  
-  .navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  .dropdown {
-    float: left;
-    overflow: hidden;
-  }
-  
-  .dropdown .dropbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-  }
-  
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(207, 196, 168);
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ebe5dd;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    float: none;
-    color: rgb(10, 16, 12);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #ede2bc;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  </style>
-  </head>
-  <body style="background-color:rgb(243, 234, 213);">
-  
-  <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="About.html">About</a>
-    <div class="dropdown">
-      <button class="dropbtn">Discover
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="Plants.html"> 1~4 Entries </a>
+        body {
+            font-family: Helvetica, sans-serif;
+            background-color: rgb(243, 234, 213);
+            margin: 0;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #c9c2a5;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            font-size: 16px;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(207, 196, 168);
+        }
+
+        .entries {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .entry {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+            color: rgb(60, 59, 84);
+            transition: transform 0.3s ease;
+        }
+
+        .entry:hover {
+            transform: scale(1.02);
+        }
+
+        .entry img {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .entry h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .entry p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: rgb(182, 217, 229);
+            transition: background-color 0.3s ease;
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+        }
+
+        .btn:hover {
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Plants.html">Entries</a>
         <a href="Gift.html">Gift Inspiration</a>
-
-
-      </div>
-    </div> 
-  </div>
-    
-    <div class="container">
-        <div class="mycard">
-            <div class="cimg">
-                <a href="entry1.html" target="_blank">
-                    <img src="images/109.jpg" alt="Red Chrysanthemum">
-                </a>
-            </div>
-            <div class="cdetail">
-                <h2> Welcome</h2>
-                <p> entry 1</p>
-            </div>
-        </div>
-
-        <div class="container">
-        <div class="mycard">
-            <div class="cimg">
-                <a href="entry2.html" target="_blank">
-                <img src="images/queen of the night.jpg" alt="click!">
-                </a>
-            </div>
-            <div class="cdetail">
-                <h2>Beauty Blooms</h2>
-                <p>entry 2</p>
-            </div>
-        </div>
-
-        <div class="container">
-        <div class="mycard">
-            <div class="cimg">
-                <a href="entry3.html" target="_blank">
-                <img src="images/bk2.jpg" alt="Daisy">
-            </a>
-            </div>
-            <div class="cdetail">
-                <h2>Floral quote</h2>
-                <p> entry 3</p>
-            </div>
-        </div>
-
-        <div class="mycard">
-            <div class="cimg">
-                <a href="entry4.html" target="_blank">
-                <img src="images/backg.jpg" alt="Tulip">
-                </a>
-            </div>
-            <div class="cdetail">
-                <h2>Floral type used <br>in mantra-merch project</h2>
-                <p>entry 4</p>
-
-            </div>
-        </div>
     </div>
+
+    <div class="entries">
+        <a class="entry" href="entry1.html" target="_blank">
+            <img src="images/109.jpg" alt="Red Chrysanthemum">
+            <div>
+                <h2>Welcome</h2>
+                <p>Entry 1</p>
+            </div>
+        </a>
+
+        <a class="entry" href="entry2.html" target="_blank">
+            <img src="images/queen of the night.jpg" alt="Queen of the Night">
+            <div>
+                <h2>Beauty Blooms</h2>
+                <p>Entry 2</p>
+            </div>
+        </a>
+
+        <a class="entry" href="entry3.html" target="_blank">
+            <img src="images/bk2.jpg" alt="Daisy">
+            <div>
+                <h2>Floral Quote</h2>
+                <p>Entry 3</p>
+            </div>
+        </a>
+
+        <a class="entry" href="entry4.html" target="_blank">
+            <img src="images/backg.jpg" alt="Tulip">
+            <div>
+                <h2>Floral Type</h2>
+                <p>Entry 4</p>
+            </div>
+        </a>
+    </div>
+
+    <a href="index.html" class="btn">Go to Home Page</a>
 </body>
-
-
-
-
- <a href="index.html" class="btn home-btn">Go to Home Page</a>
 </html>
