@@ -1,96 +1,50 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: white;
+    color: #333;
+    padding: 20px;
+}
 
-    .title {
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: 'Dancing Script', cursive; 
-      font-size: 48px;
-      color: #FFC0CB; 
-      text-shadow: 1px 1px 2px rgba(192, 156, 156, 0.3); 
-    }
+.header {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #8a6e4a;
+}
 
-body{
-    margin:0;
-    padding:0;
-    background:#ebf0ec;
-    font-family: 'Acme';
-    
-  }
+/* Entry Links */
+.entries {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Full-width layout */
+}
 
-  .container{
-    max-width:1000px;
-    margin:100px auto;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-around;
-  }
-  
-  .card{
-    position:relative;
-    margin:20px 0;
-    width:300px;
-    height:400px;
-    background: #fff;
-    transform-style:preserve-3d;
-    transform:perspective(2000px);
-    transition:1s;
-    box-shadow:inset 100px 0 50px rgba(0,0,0,0.5);
-  }
-  
-  .card:hover{
-    z-index:1111;
-    transform:perspective(2000px) rotate(-10deg);
-    box-shadow:inset 20px 0 50px rgba(0,0,0,0.5);
-  }
-  
-  .card .img-container{
-    position:relative;
-    width:100%;
-    height:100%;
-    border:1px solid #f1f6f5;
-    box-sizing:border-box;
-    transform-origin:left;
-    z-index:1;
-    transition:1s;
-  }
-  
-  .card .img-container img{
-    position:absolute;
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    object-fit:cover;
-  }
-  
-  .card:hover .img-container{
-    transform:rotateY(-135deg);
-  }
-  
-  .card .card-details{
-    position:absolute;
-    left:0;
-    top:0;
-    box-sizing:border-box;
-    padding:20px;
-    color:#1f2f2b;
-  }
-  
-   .card .card-details h2{
-    margin:0;
-    padding:0.5em 0;
-    text-transform:uppercase;
-    font-size:2em;
-    color:#556351;
-  }
-  
-  .card .card-details p{
-    margin:0;
-    padding:0;
-    line-height:25px;
-    font-size:1.1em;
-  }
-  
- 
+.entry {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%; /* Ensure full-width entries */
+}
 
+/* Different Typefaces for Each Entry */
+.type1 { font-family: 'Georgia', serif; }
+.type2 { font-family: 'Courier New', monospace; }
+.type3 { font-family: 'Arial', sans-serif; }
+.type4 { font-family: 'Times New Roman', serif; }
+.type5 { font-family: 'Tahoma', sans-serif; }
+.type6 { font-family: 'Verdana', sans-serif; }
+
+/* Hover Effects */
+.entry:hover {
+    background-color: #f0ece9;
+    color: #000;
+    border-color: #8a6e4a;
+}
