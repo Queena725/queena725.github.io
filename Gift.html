@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floral Gifting Guide</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Tonal:wght@400&family=LoRes+12&family=Altesse+Std&family=Dalliance+OT:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/your-adobe-font-kit-id.css">
+
     <style>
         body {
             margin: 0;
             font-family: Helvetica, sans-serif;
             background: url('your-gif.gif') no-repeat center center/cover;
             height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             color: rgb(199, 184, 184);
         }
 
         .header {
             position: absolute;
             top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: Helvetica, sans-serif;
             font-size: 48px;
             text-shadow: 1px 1px 2px rgba(212, 138, 138, 0.3);
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: space-around;
-            padding: 50px 10px;
         }
 
         .card {
@@ -38,12 +36,16 @@
             border-radius: 10px;
             background: rgba(0, 0, 0, 0.5);
             text-align: center;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: #fff;
             overflow: hidden;
         }
 
-        .card-details button {
-            margin-top: 10px;
+        .card button {
             background: none;
             border: 1px solid white;
             color: white;
@@ -53,7 +55,7 @@
             transition: 0.3s;
         }
 
-        .card-details button:hover {
+        .card button:hover {
             background: rgba(255, 255, 255, 0.2);
         }
 
@@ -85,42 +87,23 @@
 <body>
     <h2 class="header">Floral Gifting Guide</h2>
 
-    <div class="container">
-        <div class="card">
-            <div class="card-details">
-                <button onclick="document.location='entry5.html'">First Date</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-details">
-                <button onclick="document.location='entry6.html'">After Fight</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-details">
-                <button onclick="document.location='entry7.html'">Valentine's Day</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-details">
-                <button onclick="document.location='entry8.html'">Teacher's Day</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-details">
-                <button onclick="document.location='entry9.html'">Birth Month Flowers</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-details">
-                <button onclick="document.location='entry10.html'">Flower Poem</button>
-            </div>
-        </div>
+    <div class="card">
+        <button onclick="document.location='entry5.html'">First Date</button>
+    </div>
+    <div class="card">
+        <button onclick="document.location='entry6.html'">After Fight</button>
+    </div>
+    <div class="card">
+        <button onclick="document.location='entry7.html'">Valentine's Day</button>
+    </div>
+    <div class="card">
+        <button onclick="document.location='entry8.html'">Teacher's Day</button>
+    </div>
+    <div class="card">
+        <button onclick="document.location='entry9.html'">Birth Month Flowers</button>
+    </div>
+    <div class="card">
+        <button onclick="document.location='entry10.html'">Flower Poem</button>
     </div>
 </body>
 </html>
