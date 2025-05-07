@@ -1,109 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floral Gifting Guide</title>
-
-    <!-- Adobe Fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/your-adobe-font-kit-id.css">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Helvetica, sans-serif;
-            background: url('your-gif.gif') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: rgb(199, 184, 184);
-        }
-
-        .header {
-            position: absolute;
-            top: 20px;
-            font-size: 48px;
-            text-shadow: 1px 1px 2px rgba(212, 138, 138, 0.3);
-        }
-
-        .card {
-            position: relative;
-            width: 250px;
-            height: 150px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            background: rgba(0, 0, 0, 0.5);
-            text-align: center;
-            margin: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            overflow: hidden;
-        }
-
-        .card button {
-            background: none;
-            border: 1px solid white;
-            color: white;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .card button:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .card:nth-child(1) {
-            font-family: 'Space Mono', monospace;
-        }
-
-        .card:nth-child(2) {
-            font-family: 'Altesse Std', cursive;
-        }
-
-        .card:nth-child(3) {
-            font-family: 'Dalliance OT', cursive;
-        }
-
-        .card:nth-child(4) {
-            font-family: 'Tonal', sans-serif;
-        }
-
-        .card:nth-child(5) {
-            font-family: 'LoRes 12 OT', sans-serif;
-        }
-
-        .card:nth-child(6) {
-            font-family: 'Space Mono', monospace;
-        }
-    </style>
+    <link rel="stylesheet" href="style3.css">
 </head>
 <body>
-    <h2 class="header">Floral Gifting Guide</h2>
+    <title>Floral Gifting Guide</title>
+    <style>
+        body {
+          margin: 0;
+          font-family: Helvetica, sans-serif;
+          background: url('your-gif.gif') no-repeat center center/cover;
+          height: 100vh;
+          color: rgb(199, 184, 184);
+        }
+        .header {
+          position: absolute;
+          top: 20px;
+          left: 50%;
+          transform: translateX(-50%); 
+          font-family: Helvetica, sans-serif;
+          font-size: 48px;
+          text-shadow: 1px 1px 2px rgba(212, 138, 138, 0.3); 
+        }
+      </style>
+  
+    </head>
+    <body>
+      <h2 class="header"> Floral Gifting Guide </h2>
+    
+    
+    
+    <div class="container">
+        <div class="card">
+            <div class="img-container">
+                <img src="images/.jpg" alt=""/>
+            </div>
+            <div class="card-details">
+            
 
-    <div class="card">
-        <button onclick="document.location='entry5.html'">First Date</button>
-    </div>
-    <div class="card">
-        <button onclick="document.location='entry6.html'">After Fight</button>
-    </div>
-    <div class="card">
-        <button onclick="document.location='entry7.html'">Valentine's Day</button>
-    </div>
-    <div class="card">
-        <button onclick="document.location='entry8.html'">Teacher's Day</button>
-    </div>
-    <div class="card">
-        <button onclick="document.location='entry9.html'">Birth Month Flowers</button>
-    </div>
-    <div class="card">
-        <button onclick="document.location='entry10.html'">Flower Poem</button>
+                <button onclick="document.location='entry5.html'">entry5</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-container">
+                <img src="images/.jpg" alt=""/>
+            </div>
+            <div class="card-details">
+                
+                <button onclick="document.location='entry6.html'">entry6</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-container">
+                <img src="images/.jpg" alt=""/>
+            </div>
+            <div class="card-details"> 
+               
+                <button onclick="document.location='entry7.html'">entry7</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-container">
+                <img src="images/ .jpg" alt=""/>
+            </div>
+            <div class="card-details">
+               
+                <button onclick="document.location='entry8.html'">entry8</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-container">
+                <img src="images/.jpg" alt=""/>
+            </div>
+            <div class="card-details">
+                
+                <button onclick="document.location='entry9.html'">entry9</button>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-container">
+                <img src="images/.jpg" alt=""/>
+            </div>
+            <div class="card-details">
+                <h3>last entry!</h3>
+                <button onclick="document.location='entry10.html'">entry10</button>
+                <p></p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
