@@ -23,9 +23,9 @@ html{box-sizing: border-box;
     border-right: 2px solid white; 
     white-space: nowrap;
     overflow: hidden;
-	 font-family: "Playwrite TZ", cursive;
+	
   font-optical-sizing: auto;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;;
+font-family: 'Inter', sans-serif;
   font-style: normal;
 }
 
