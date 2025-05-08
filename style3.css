@@ -5,9 +5,9 @@
       left: 50%;
       transform: translateX(-50%);
       font-family: Helvetica, sans-serif;
-      font-size: 48px;
-      color: #C5DFDF;
-      text-shadow: ; 
+      font-size: 40px;
+      color: white;
+
     }
 
 body{
@@ -31,11 +31,11 @@ body{
     margin:20px 0;
     width:300px;
     height:400px;
-    background: #fff;
+    background: #ffff;
     transform-style:preserve-3d;
     transform:perspective(2000px);
     transition:1s;
-    box-shadow:;
+
   }
   
   .card:hover{
