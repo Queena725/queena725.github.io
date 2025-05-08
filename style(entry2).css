@@ -6,6 +6,7 @@ a.btn {
   text-decoration: none;
   border-radius: 8px;
   margin: 50px; 
+     font-family: 'Inter', sans-serif; 
 }
 
 .btn:hover {
